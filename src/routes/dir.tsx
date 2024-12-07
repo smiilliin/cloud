@@ -112,14 +112,15 @@ const _File = ({
       }}
     >
       {isDir ? (
-        <img src={Directory} style={{ width: 35 }}></img>
+        <img src={Directory} style={{ width: 35, height: 35 }}></img>
       ) : (
-        <img src={Cloud} style={{ width: 35 }}></img>
+        <img src={Cloud} style={{ width: 35, height: 35 }}></img>
       )}
       <OverflowText>{name}</OverflowText>
       {enableModal ? (
         <img
           src={Tripledot}
+          style={{ width: 35, height: 35 }}
           onClick={(event) => {
             event.stopPropagation();
             context.setPath(Path.join(dir, name));
@@ -337,10 +338,11 @@ const Newdir = styled(_Newdir)`
   padding: 10px;
   position: fixed;
   right: 30px;
-  bottom: 30px;
+  bottom: 60px;
+  background-color: var(--second-color);
 
   &:hover {
-    background-color: var(--second-color);
+    background-color: white;
   }
 `;
 
